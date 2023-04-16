@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My personal portfolio",
   "source": "/index.html",
-  "main": "script.js",
+  "main": "script.html",
   "scripts": {
     "start": "parcel",
     "build": "parcel build"
