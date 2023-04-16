@@ -5,7 +5,7 @@
   "source": "/index.html",
   "main": "script.js",
   "scripts": {
-    "start": "parcel index.html",
+    "start": "parcel",
     "build": "parcel build"
   },
   "author": "Emre",
