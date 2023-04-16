@@ -55,6 +55,14 @@ const data = [
     demoLink: "https://ec-alsancak.netlify.app/",
     gitLink: "https://github.com/ealsa/Portfolio-project",
   },
+  {
+    id: 7,
+    title: "JavaScript",
+    name: "JS Shopping Cart",
+    img: portfolio,
+    demoLink: "https://vanillajs-shop-cart.netlify.app/",
+    gitLink: "https://github.com/ealsa/js-shopping-cart",
+  },
 ];
 
 export default data;
