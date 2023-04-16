@@ -5,8 +5,9 @@ import HTML from "./img/html.png";
 import JS from "./img/javascript.png";
 import TWIND from "./img/tailwind.png";
 import REACT from "./img/react.png";
+import SCSS from "./img/scss.png";
 
-const SKILLS = [HTML, CSS, JS, REACT, TWIND, GIT];
+const SKILLS = [HTML, CSS, JS, REACT, TWIND, GIT, SCSS];
 
 const sections = document.querySelectorAll("section");
 const nav = document.querySelectorAll("header nav a");
@@ -21,10 +22,14 @@ const contactName = document.getElementById("contactName");
 const contactEmail = document.getElementById("contactEmail");
 const contactMessage = document.getElementById("contactMessage");
 
-menuIcon.onclick = () => {
+menuIcon.addEventListener("click", () => {
   menuIcon.classList.toggle("bx-x");
   navbar.classList.toggle("active");
-};
+
+  navbar.querySelectorAll(".nav-link").forEach((item) => {
+    item.classList.toggle("slide-in");
+  });
+});
 
 window.onscroll = () => {
   sections.forEach((sec) => {
@@ -120,14 +125,14 @@ ScrollReveal().reveal(".heading, #skills-1, #skills-3, #item-2, .board", {
   origin: "top",
 });
 ScrollReveal().reveal(
-  ".services-container, .contact form, #item-5, #skills-2, #skills-4, #contactMessage, .social-media, .scroll-reveal-div, .about-content p",
+  ".services-container, .contact form, #item-5, #skills-2, #skills-4, #skills-6, #contactMessage, .social-media, .scroll-reveal-div, .about-content p",
   { origin: "bottom" },
 );
 ScrollReveal().reveal(
-  ".home-content h1, .home-content p, #item-1, #item-4, #skills-0, #contactName, .linkedIn, .about-content h3",
+  ".home-content h1, .home-content p, #item-1, #item-4, #item-7, #skills-0, #contactName, .linkedIn, .about-content h3",
   { origin: "left" },
 );
 ScrollReveal().reveal(
-  ".about-content .heading, #item-3, #item-6, #item-9, #skills-5, #contactEmail, .more-on, #item-6, .home-content h3, .main-git",
+  ".about-content .heading, #item-3, #item-6, #skills-5, #contactEmail, .more-on, #item-6, .home-content h3, .main-git",
   { origin: "right" },
 );

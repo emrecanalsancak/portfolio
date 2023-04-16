@@ -4,6 +4,7 @@ import math from "./img/math.png";
 import portfolio from "./img/portfolio.png";
 import education from "./img/education.png";
 import ecommerce from "./img/react-e-commerce.png";
+import jsShop from "./img/js-shop.png";
 
 const data = [
   {
@@ -59,7 +60,7 @@ const data = [
     id: 7,
     title: "JavaScript",
     name: "JS Shopping Cart",
-    img: portfolio,
+    img: jsShop,
     demoLink: "https://vanillajs-shop-cart.netlify.app/",
     gitLink: "https://github.com/ealsa/js-shopping-cart",
   },

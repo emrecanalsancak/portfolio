@@ -47,7 +47,16 @@ body {
 
 section {
   min-height: 100vh;
-  padding: 10rem 9% 2rem;
+  padding: 10rem 9%;
+}
+
+.more-on a {
+  box-shadow: 0px 10px 14px -5px rgba(73, 173, 255, 0.75);
+  transition: all 0.5s;
+}
+
+.more-on a:hover {
+  box-shadow: 0px 10px 14px -3px var(--main-color);
 }
 
 .header {
@@ -100,23 +109,6 @@ section {
   justify-content: center;
   align-items: center;
   gap: 5rem;
-}
-
-.home-img img {
-  width: 35vw;
-  animation: floatImage 4s ease-in-out infinite;
-}
-
-@keyframes floatImage {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-2.4rem);
-  }
-  100% {
-    transform: translateY(0);
-  }
 }
 
 .home-content h3 {
@@ -293,22 +285,24 @@ span {
 .projects-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  align-items: center;
+  place-items: center;
   gap: 2.5rem;
 }
 
 .projects-container .projects-box {
-  width: 90%;
-  height: 90%;
+  width: 85%;
+  height: 23rem;
   border-radius: 2rem;
   box-shadow: 0 0 1rem var(--bg-color);
   overflow: hidden;
   display: flex;
+  position: relative;
 }
 
 .projects-box img {
   object-fit: cover;
   width: 100%;
+  height: 100%;
   opacity: 0.5;
   transition: 0.5s ease;
 }
@@ -545,6 +539,9 @@ textarea::placeholder {
 }
 
 @media (max-width: 1200px) {
+  section {
+    padding: 8rem 5%;
+  }
   html {
     font-size: 55%;
   }
@@ -569,6 +566,10 @@ textarea::placeholder {
 
   .projects {
     padding-bottom: 7rem;
+  }
+
+  .projects-layer h4 {
+    font-size: 2.5rem;
   }
 
   .contact {
@@ -602,18 +603,63 @@ textarea::placeholder {
     padding: 1rem 3%;
     background: var(--bg-color);
     border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-    display: none;
+    box-shadow: 0px 10px 14px -5px #0ef;
+    transform: translateX(-100%);
   }
 
   .navbar.active {
-    display: block;
+    transform: translateX(0);
   }
 
   .navbar a {
     display: block;
     font-size: 2rem;
     margin: 3rem 0;
+  }
+
+  .navbar a:nth-child(1) {
+    transform: translateX(-100%);
+    transition: transform 0.1s ease;
+  }
+
+  .navbar a:nth-child(2) {
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
+  }
+
+  .navbar a:nth-child(3) {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .navbar a:nth-child(4) {
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+  }
+
+  .navbar a:nth-child(5) {
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+  }
+
+  .navbar.active a:nth-child(1) {
+    transform: translateX(0);
+  }
+
+  .navbar.active a:nth-child(2) {
+    transform: translateX(0);
+  }
+
+  .navbar.active a:nth-child(3) {
+    transform: translateX(0);
+  }
+
+  .navbar.active a:nth-child(4) {
+    transform: translateX(0);
+  }
+
+  .navbar.active a:nth-child(5) {
+    transform: translateX(0);
   }
 
   .home {
@@ -635,6 +681,10 @@ textarea::placeholder {
 
   .about {
     flex-direction: column-reverse;
+  }
+
+  .board {
+    margin-top: -30rem;
   }
 
   .services h2 {
