@@ -52,8 +52,8 @@ const data = [
     title: "React",
     name: "Portfolio Website",
     img: portfolio,
-    demoLink: "https://ecalsancak.netlify.app/",
-    gitLink: "https://github.com/ealsa/Portfolio",
+    demoLink: "https://ec-alsancak.netlify.app/",
+    gitLink: "https://github.com/ealsa/Portfolio-project",
   },
 ];
 
