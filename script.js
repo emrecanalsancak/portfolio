@@ -113,9 +113,9 @@ submitBtn.addEventListener("click", () => {
   contactMessage.value = "";
 });
 
-// ------------- SCROLL REVEAL ------------ \\
+//  ------------- SCROLL REVEAL ------------ \\
 ScrollReveal({
-  reset: false,
+  reset: true,
   distance: "150px",
   duration: 1000,
   delay: 100,
