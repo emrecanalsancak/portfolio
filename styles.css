@@ -708,6 +708,10 @@ textarea::placeholder {
   .contact form .input-box input {
     width: 100%;
   }
+
+  .bg-pattern {
+    opacity: 0.25;
+  }
 }
 
 @media (max-width: 365px) {
