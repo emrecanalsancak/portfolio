@@ -48,6 +48,7 @@ section {
   min-height: 100vh;
   padding: 10rem 9%;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .more-on a {
@@ -440,10 +441,6 @@ textarea::placeholder {
 }
 
 /* TICTACTOE */
-/* body {
-  background: black;
-  color: white;
-} */
 
 .board {
   display: grid;
@@ -498,12 +495,17 @@ textarea::placeholder {
   transition: all 0.5s;
 }
 
+.cell:hover {
+  background-color: rgba(0, 238, 255, 0.1);
+}
+
 /*  WAVE ANIMATION */
 
 .winner.letter {
   text-shadow: 2px 2px 8px var(--main-color);
   font-size: 48px;
   animation: wave 1s ease-in-out;
+  pointer-events: none;
 }
 
 @keyframes wave {
@@ -692,11 +694,20 @@ textarea::placeholder {
   .projects-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .card {
+    width: 15rem;
+    height: 15rem;
+  }
 }
 
 @media (max-width: 617px) {
   .projects-container {
     grid-template-columns: 1fr;
+  }
+
+  .card-container {
+    gap: 3rem;
   }
 }
 
