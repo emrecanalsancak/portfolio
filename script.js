@@ -21,6 +21,11 @@ const submitBtn = document.getElementById("submitBtn");
 const contactName = document.getElementById("contactName");
 const contactEmail = document.getElementById("contactEmail");
 const contactMessage = document.getElementById("contactMessage");
+const form = document.querySelector("#form");
+
+window.onbeforeunload = () => {
+  form.reset();
+};
 
 menuIcon.addEventListener("click", () => {
   menuIcon.classList.toggle("bx-x");
@@ -107,10 +112,61 @@ function renderSkillsCards() {
 }
 renderSkillsCards();
 
-submitBtn.addEventListener("click", () => {
-  contactName.value = "";
-  contactEmail.value = "";
-  contactMessage.value = "";
+// Form Validation
+
+let nameInput;
+let emailInput;
+let messageInput;
+
+contactName.addEventListener("input", (e) => {
+  nameInput = e.target.value;
+});
+
+contactEmail.addEventListener("input", (e) => {
+  emailInput = e.target.value;
+});
+
+contactMessage.addEventListener("input", (e) => {
+  messageInput = e.target.value;
+});
+
+function validateForm() {
+  let isValid = true;
+
+  if (!nameInput && !emailInput && !messageInput) {
+    contactName.classList.add("invalid");
+    contactEmail.classList.add("invalid");
+    contactMessage.classList.add("invalid");
+    isValid = false;
+  }
+
+  if (nameInput === "" || !/^[a-zA-Z-' ]+$/.test(nameInput)) {
+    contactName.classList.add("invalid");
+    isValid = false;
+  }
+
+  if (emailInput === "" || !/\S+@\S+\.\S+/.test(emailInput)) {
+    contactEmail.classList.add("invalid");
+    isValid = false;
+  }
+
+  if (messageInput === "") {
+    contactMessage.classList.add("invalid");
+    isValid = false;
+  }
+
+  return isValid;
+}
+
+submitBtn.addEventListener("click", (e) => {
+  if (!validateForm()) {
+    e.preventDefault();
+    setTimeout(() => {
+      contactName.classList.remove("invalid");
+      contactEmail.classList.remove("invalid");
+      contactMessage.classList.remove("invalid");
+    }, 1200);
+  }
 });
 
 //  ------------- SCROLL REVEAL ------------ \\

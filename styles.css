@@ -376,7 +376,7 @@ span {
 .contact form .input-box input::placeholder,
 textarea::placeholder {
   color: var(--main-color);
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .contact form .input-box input,
@@ -384,15 +384,43 @@ textarea::placeholder {
   width: 100%;
   padding: 1.5rem;
   font-size: 1.6rem;
-  color: var(--text-color);
+  color: var(--main-color);
   background: var(--bg-color);
-  /* border: 1px solid rgb(21, 54, 143); */
   border-radius: 0.8rem;
   margin: 0.7rem 0;
   caret-color: var(--main-color);
   -webkit-box-shadow: 0px 11px 12px -10px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 11px 12px -10px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 11px 12px -10px rgba(73, 173, 255, 0.75);
+}
+
+.invalid {
+  -webkit-box-shadow: 0px 11px 12px -10px rgba(0, 0, 0, 0.75) !important;
+  -moz-box-shadow: 0px 11px 12px -10px rgba(0, 0, 0, 0.75) !important;
+  box-shadow: 0px 11px 12px -10px red !important;
+  animation: tilt-shaking 0.4s ease;
+  animation-iteration-count: 2;
+}
+
+@keyframes tilt-shaking {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(10px);
+  }
+  60% {
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .contact form .input-box input {
