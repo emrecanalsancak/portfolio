@@ -1,11 +1,11 @@
 import projectsData from "./data";
-import CSS from "./img/css.png";
-import GIT from "./img/github.png";
-import HTML from "./img/html.png";
-import JS from "./img/javascript.png";
-import TWIND from "./img/tailwind.png";
-import REACT from "./img/react.png";
-import SCSS from "./img/scss.png";
+import CSS from "./assets/css.png";
+import GIT from "./assets/github.png";
+import HTML from "./assets/html.png";
+import JS from "./assets/javascript.png";
+import TWIND from "./assets/tailwind.png";
+import REACT from "./assets/react.png";
+import SCSS from "./assets/scss.png";
 
 const SKILLS = [HTML, CSS, JS, REACT, TWIND, GIT, SCSS];
 

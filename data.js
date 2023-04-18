@@ -1,10 +1,10 @@
-import REST from "./img/rest-countries.png";
-import reactWeather from "./img/forecast-weather.png";
-import math from "./img/math.png";
-import portfolio from "./img/portfolio.png";
-import education from "./img/education.png";
-import ecommerce from "./img/react-e-commerce.png";
-import jsShop from "./img/js-shop.png";
+import REST from "./assets/rest-countries.png";
+import reactWeather from "./assets/forecast-weather.png";
+import math from "./assets/math.png";
+import portfolio from "./assets/portfolio.png";
+import education from "./assets/education.png";
+import ecommerce from "./assets/react-e-commerce.png";
+import jsShop from "./assets/js-shop.png";
 
 const data = [
   {
