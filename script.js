@@ -59,7 +59,7 @@ window.onscroll = () => {
 
 // TYPED JS
 const typed = new Typed(".multiple-text", {
-  strings: ["Frontend Developer"],
+  strings: ["Front-end Developer"],
   typeSpeed: 100,
   backSpeed: 100,
   backDelay: 1000,
@@ -114,9 +114,9 @@ renderSkillsCards();
 
 // Form Validation
 
-let nameInput;
-let emailInput;
-let messageInput;
+let nameInput = "";
+let emailInput = "";
+let messageInput = "";
 
 contactName.addEventListener("input", (e) => {
   nameInput = e.target.value;
@@ -159,6 +159,7 @@ function validateForm() {
 }
 
 submitBtn.addEventListener("click", (e) => {
+  console.log("messageInput -->", messageInput);
   if (!validateForm()) {
     e.preventDefault();
     setTimeout(() => {
