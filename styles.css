@@ -156,6 +156,10 @@ span {
   box-shadow: 0 0 1rem var(--main-color);
 }
 
+.scroll-reveal-div {
+  border-radius: 4rem;
+}
+
 .btn {
   cursor: pointer;
   display: inline-block;
