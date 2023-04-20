@@ -707,10 +707,6 @@ textarea::placeholder {
     flex-direction: column-reverse;
   }
 
-  .board {
-    margin-top: -15rem;
-  }
-
   .services h2 {
     margin-bottom: 3rem;
   }
