@@ -62,7 +62,7 @@ const data = [
     name: "JS Shopping Cart",
     img: jsShop,
     demoLink: "https://vanillajs-shop-cart.netlify.app/",
-    gitLink: "https://github.com/ealsa/js-shopping-cart",
+    gitLink: "https://github.com/emrecanalsancak/js-shopping-cart",
   },
 ];
 
